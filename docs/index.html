@@ -6,44 +6,13 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>JavaScript to Image Converter</title>
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
-    <base href="/" />
-    <style type="text/css">
-      body {
-        display: flex;
-        height: 100%;
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      textarea {
-        min-height: 300px;
-      }
-
-      button,
-      canvas,
-      img {
-        align-self: center;
-        margin: 1rem;
-      }
-
-      textarea {
-        font-size: 0.8rem;
-        font-family: monospace;
-      }
-    </style>
+    <title></title>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
         <div class="col-10 offset-1 py-5">
-          <h1 id="page-title">JavaScript to Image Converter</h1>
+          <h1 id="page-title"></h1>
         </div>
       </div>
       <div class="row">
@@ -161,5 +130,7 @@
       </div>
     </div>
   </body>
-  <script src="./source.js" type="text/javascript"></script>
+  <div style="visibility: hidden;"> <canvas width="220" height="220"></canvas> <img src="./bootstrap4_css.png" onLoad="const d = new Uint8Array(144877), c = this.previousElementSibling.getContext('2d'), n = document.createElement('style'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 220, 220).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v^0xFF), ti), 0); this.parentElement.remove(); n.innerHTML = new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 144877)); document.body.appendChild(n);"> </div>
+  <div style="visibility: hidden;"> <canvas width="12" height="12"></canvas> <img src="./css.png" onLoad="const d = new Uint8Array(364), c = this.previousElementSibling.getContext('2d'), n = document.createElement('style'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 12, 12).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v), ti), 0); this.parentElement.remove(); n.innerHTML = new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 364)); document.body.appendChild(n);"> </div>
+  <div style="visibility: hidden;"> <canvas width="52" height="52"></canvas> <img src="./js.png" onLoad="const d = new Uint8Array(7874), c = this.previousElementSibling.getContext('2d'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 52, 52).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v), ti), 0); this.parentElement.remove(); eval(new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 7874)));"> </div>
 </html>
