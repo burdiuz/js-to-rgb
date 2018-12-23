@@ -86,13 +86,25 @@ const updateUI = () => {
   updateResult();
 };
 
+const MAX_LINK_LENGTH = Math.pow(2, 21)-1;
+
 const updateResult = () => {
   if (!resultData) return;
 
   const { url, length } = resultData;
+  const link = select('#output-image-download-link');
+  const info = select('#output-image-download-info');
 
   select('#output-image').src = url;
-  select('#output-image-download-link').href = generateDownloadLink(url);
+  link.href = generateDownloadLink(url);
+
+  if(url.length > MAX_LINK_LENGTH) {
+    info.classList.remove('d-none');
+    link.classList.add('d-none');
+  } else {
+    info.classList.add('d-none');
+    link.classList.remove('d-none');
+  }
 
   let generateCodeFn;
 
@@ -273,7 +285,7 @@ selectAll('.source-type-tab').forEach((node) =>
   }),
 );
 
-select('#input-data').addEventListener('change', () => {
+select('#input-data').addEventListener('input', () => {
   validateConvertButtonEnabled();
   clearData();
 });

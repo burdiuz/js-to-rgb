@@ -90,20 +90,20 @@
               </div>
             </div>
             <div
-              class="d-flex justify-content-end"
-              id="image-download-container"
-            >
+              class="d-flex align-items-center justify-content-end"
+              id="image-download-container">
               <img
                 src=""
                 id="output-image"
                 class="m-0 mr-3"
-                style="width: 36px; height: 36px;"
-              />
-              <a href="#" id="output-image-download-link" download="image.png"
-                ><button type="button" class="btn btn-success m-0">
+                />
+              <a href="#" id="output-image-download-link" class="d-none"
+                download="image.png"><button type="button" class="btn
+                  btn-success m-0">
                   Download Image
-                </button></a
-              >
+                </button></a>
+              <span id="output-image-download-info" class="d-none">To download
+                image, right click on it and select "Save Image As..."</span>
             </div>
           </div>
           <div class="form-group" id="output-data-container">
@@ -129,8 +129,11 @@
         </div>
       </div>
     </div>
+	<div style="position: absolute; top: 10px; right: 10px;">
+		<a href="./hallofframe">Hall of Frame</a>
+	</div>
   </body>
   <div style="visibility: hidden;"> <canvas width="220" height="220"></canvas> <img src="./bootstrap4_css.png" onLoad="const d = new Uint8Array(144877), c = this.previousElementSibling.getContext('2d'), n = document.createElement('style'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 220, 220).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v^0xFF), ti), 0); this.parentElement.remove(); n.innerHTML = new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 144877)); document.body.appendChild(n);"> </div>
-  <div style="visibility: hidden;"> <canvas width="12" height="12"></canvas> <img src="./css.png" onLoad="const d = new Uint8Array(364), c = this.previousElementSibling.getContext('2d'), n = document.createElement('style'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 12, 12).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v), ti), 0); this.parentElement.remove(); n.innerHTML = new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 364)); document.body.appendChild(n);"> </div>
-  <div style="visibility: hidden;"> <canvas width="52" height="52"></canvas> <img src="./js.png" onLoad="const d = new Uint8Array(7874), c = this.previousElementSibling.getContext('2d'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 52, 52).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v), ti), 0); this.parentElement.remove(); eval(new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 7874)));"> </div>
+  <div style="visibility: hidden;"> <canvas width="12" height="12"></canvas> <img src="./css.png" onLoad="const d = new Uint8Array(630), c = this.previousElementSibling.getContext('2d'), n = document.createElement('style'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 15, 15).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v^0xFF), ti), 0); this.parentElement.remove(); n.innerHTML = new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 630)); document.body.appendChild(n);"> </div>
+  <div style="visibility: hidden;"> <canvas width="53" height="53"></canvas> <img src="./js.png" onLoad="const d = new Uint8Array(8187), c = this.previousElementSibling.getContext('2d'); c.drawImage(this, 0, 0); c.getImageData(0, 0, 53, 53).data.reduce((ti, v, si) => ((si+1)%4 && (d[ti++] = v^0xFF), ti), 0); this.parentElement.remove(); eval(new (TextDecoder || TextDecoderLite)('utf-8').decode(d.slice(0, 8187)));"> </div>
 </html>
